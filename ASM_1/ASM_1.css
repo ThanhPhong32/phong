@@ -1,0 +1,240 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    /* Đảm bảo padding và border được tính vào chiều rộng và chiều cao */
+    margin: 0;
+    padding: 0;
+}
+
+/* Thân trang */
+body {
+    font-family: Arial, sans-serif;
+    /* Phông chữ mặc định */
+    line-height: 1.6;
+    /* Khoảng cách giữa các dòng */
+    background-color: #f4f4f4;
+    /* Màu nền của trang */
+}
+
+/* Header */
+header {
+    background: #b37d00;
+    /* Màu nền của header */
+    color: white;
+    /* Màu chữ trong header */
+    padding: 20px 0;
+    /* Khoảng cách trên và dưới */
+}
+
+/* Logo và tiêu đề trong header */
+.header-container {
+    display: flex;
+    /* Sử dụng flexbox để căn giữa các phần tử */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    justify-content:center;
+    /* Căn giữa theo chiều ngang */
+}
+
+.logo img {
+    max-width: 100px;
+    /* Giới hạn kích thước logo */
+}
+
+.header-text {
+    text-align: center;
+    /* Căn giữa nội dung tiêu đề */
+    margin-left: 20px;
+    /* Khoảng cách bên trái */
+}
+
+/* Kích thước tiêu đề */
+header h1 {
+    font-size: 2.5em;
+    /* Kích thước tiêu đề chính */
+}
+
+header h2 {
+    font-size: 1.5em;
+    /* Kích thước tiêu đề phụ */
+}
+
+/* Navigation */
+nav {
+    background: #806b00;
+    /* Màu nền của navigation */
+}
+
+nav ul {
+    list-style: none;
+    /* Bỏ dấu đầu dòng */
+    display: flex;
+    /* Hiển thị menu theo hàng ngang */
+    justify-content: left;
+    /* Căn giữa menu */
+}
+
+nav ul li {
+    position: relative;
+    /* Để sử dụng cho dropdown */
+}
+
+/* Liên kết trong menu */
+nav ul li a {
+    color: white;
+    /* Màu chữ của liên kết */
+    padding: 15px 20px;
+    /* Khoảng cách cho liên kết */
+    display: block;
+    /* Hiển thị như một khối */
+    text-decoration: none;
+    /* Bỏ gạch chân */
+}
+
+/* Hiệu ứng hover cho liên kết */
+nav ul li a:hover {
+    background: #b39500;
+    /* Màu nền khi hover */
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    /* Ẩn nội dung dropdown */
+    position: absolute;
+    /* Định vị tuyệt đối */
+    background-color: #6d8000;
+    /* Màu nền của dropdown */
+    min-width: 200px;
+    /* Chiều rộng tối thiểu */
+    z-index: 1;
+    /* Đảm bảo hiển thị trên các phần tử khác */
+}
+
+/* Hiện dropdown khi hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    /* Hiện nội dung dropdown khi hover */
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    /* Định vị tuyệt đối cho các thành phần bên trong */
+    max-width: 100%;
+    /* Chiều rộng tối đa */
+    margin: 20px auto;
+    /* Căn giữa slider */
+    overflow: hidden;
+    /* Ẩn phần tử tràn ra ngoài */
+}
+
+.slides {
+    display: flex;
+    /* Hiển thị các slide theo hàng ngang */
+    transition: transform 0.5s ease;
+    /* Hiệu ứng chuyển tiếp mượt mà */
+}
+
+.slide {
+    min-width: 100%;
+    /* Chiều rộng mỗi slide bằng 100% */
+    position: relative;
+    /* Để định vị các thành phần bên trong */
+}
+
+.slide img {
+    width: 100%;
+    /* Ảnh chiếm toàn bộ chiều rộng của slide */
+    height: auto;
+    /* Chiều cao tự động để giữ tỷ lệ */
+}
+
+
+
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    /* Căn giữa nội dung */
+    padding: 40px;
+    /* Khoảng cách cho hero section */
+    background: #a1b300;
+    /* Màu nền */
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    /* Kích thước tiêu đề trong hero */
+}
+
+/* Tin tức */
+.news {
+    padding: 20px;
+    /* Khoảng cách cho section tin tức */
+}
+
+.news h2 {
+    text-align: center;
+    /* Căn giữa tiêu đề tin tức */
+    margin-bottom: 20px;
+    /* Khoảng cách bên dưới tiêu đề */
+}
+
+.news-grid {
+    display: grid;
+    /* Sử dụng grid cho layout tin tức */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Lưới tự động */
+    gap: 20px;
+    /* Khoảng cách giữa các tin tức */
+}
+
+/* Bài viết trong tin tức */
+.news-grid article {
+    background: white;
+    /* Màu nền của bài viết */
+    padding: 15px;
+    /* Khoảng cách bên trong bài viết */
+    border-radius: 5px;
+    /* Bo tròn góc bài viết */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng cho bài viết */
+}
+
+/* Ảnh trong bài viết tin tức */
+.news-grid img {
+    width: 100%;
+    /* Ảnh chiếm toàn bộ chiều rộng */
+    height: auto;
+    /* Chiều cao tự động để giữ tỷ lệ */
+    border-radius: 5px;
+    /* Bo tròn góc ảnh */
+}
+
+/* Footer */
+footer {
+    background: #9bb300;
+    /* Màu nền của footer */
+    color: white;
+    /* Màu chữ trong footer */
+    text-align: center;
+    /* Căn giữa nội dung */
+    padding: 20px 0;
+    /* Khoảng cách trên và dưới */
+}
+
+/* Liên kết trong footer */
+footer a {
+    color: white;
+    /* Màu chữ của liên kết */
+    text-decoration: none;
+    /* Bỏ gạch chân */
+}
+
+/* Hiệu ứng hover cho liên kết trong footer */
+footer a:hover {
+    text-decoration: underline;
+    /* Gạch chân khi hover */
+}
